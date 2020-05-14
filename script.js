@@ -21,8 +21,8 @@ weatherFetch('moscow')
         object = new Weather(res);
         console.log(object);
         populateInfo(object);
-        // let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
-        // document.body.style.background = `url("${myUrl}")`;
+        let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
+        document.body.style.background = `url("${myUrl}")`;
 })
 
 slide.addEventListener('click',()=>{
@@ -40,7 +40,7 @@ slide.addEventListener('click',()=>{
 })
 
 async function weatherFetch(city='moscow'){
-    let info = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=87dafebfeebac9eb90265653aa6e5a00`);
+    let info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=87dafebfeebac9eb90265653aa6e5a00`);
     let json = await info.json();
     return json;
 }
@@ -56,7 +56,7 @@ function populateInfo(object){
             <li><i class="fas fa-tint fa-lg"></i><span id="humid">${object.humid} %</span></li>
         </ul>
     `;
-    // let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
-    // document.body.style.background = `url("${myUrl}")`;
+    let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
+    document.body.style.background = `url("${myUrl}")`;
 }
 

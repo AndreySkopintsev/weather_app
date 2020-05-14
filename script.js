@@ -21,8 +21,8 @@ weatherFetch('moscow')
         object = new Weather(res);
         console.log(object);
         populateInfo(object);
-        let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
-        document.body.style.background = `url("${myUrl}")`;
+        // let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
+        // document.body.style.background = `url("${myUrl}")`;
 })
 
 slide.addEventListener('click',()=>{
@@ -56,7 +56,7 @@ function populateInfo(object){
             <li><i class="fas fa-tint fa-lg"></i><span id="humid">${object.humid} %</span></li>
         </ul>
     `;
-    let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
-    document.body.style.background = `url("${myUrl}")`;
+    // let myUrl = `https://source.unsplash.com/1600x900/?${object.name}`;
+    // document.body.style.background = `url("${myUrl}")`;
 }
 
